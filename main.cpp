@@ -3,11 +3,18 @@
 #include <queue>
 #include <stdio.h>
 
+
+#define READ(f) freopen(f, "r", stdin)  
+#define WRITE(f) freopen(f, "w", stdout)
+
 using namespace std;
 typedef stack<int> SI;
+
 SI towerA, towerB, towerC;
 SI *alamatA, *alamatB, *alamatC;
 int param;
+
+
 void pindah (SI&towerA, SI&towerC);
 
 void rekarsif(int n, SI &towerA, SI &towerB, SI &towerC){
@@ -33,6 +40,10 @@ void pindah(SI &towerA, SI &towerC){
 }
 
 int main(){
+
+	READ("in.txt");
+ 	//WRITE("out.txt");
+ 
 	int n;
 	param=0;
 	scanf("%d",&n);
