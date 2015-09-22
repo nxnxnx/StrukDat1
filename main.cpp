@@ -2,6 +2,9 @@
 #include <stack>
 #include <queue>
 #include <stdio.h>
+#include <ctype.h>
+#include <stdlib.h>
+#include <cstring>
 
 using namespace std;
 typedef stack<int> SI;
@@ -33,9 +36,19 @@ void pindah(SI &towerA, SI &towerC){
 }
 
 int main(){
-	int n;
+	string n_str;
 	param=0;
-	scanf("%d",&n);
+	int n;
+    while(true){
+        cout << "Masukan Input" << endl;
+        cin >> n;
+        if(cin.fail()){
+            cout << "Input Salah, Ulangi" << endl << endl;
+            cin.clear();
+            cin.ignore(99999999, '\n'); // << Hard-code FTW
+        } else { break;}
+    }
+
 	for (int a=n;0<a;--a){
 		towerA.push(a);
 	}
