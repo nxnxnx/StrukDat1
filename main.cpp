@@ -1,16 +1,11 @@
 #include <iostream>
 #include <stack>
-#include <queue>
 #include <stdio.h>
-#include <ctype.h>
-#include <stdlib.h>
-#include <cstring>
 
 using namespace std;
 typedef stack<int> SI;
 SI towerA, towerB, towerC;
 SI *alamatA, *alamatB, *alamatC;
-int param;
 void pindah (SI&towerA, SI&towerC);
 
 void rekarsif(int n, SI &towerA, SI &towerB, SI &towerC){
@@ -31,21 +26,17 @@ void pindah(SI &towerA, SI &towerC){
 	towerC.push(towerA.top());
 	towerA.pop();
 	cout<<endl;
-	param++;
-
 }
 
 int main(){
-	string n_str;
-	param=0;
 	int n;
     while(true){
         cout << "Masukan Input" << endl;
         cin >> n;
-        if(cin.fail()){
+        if(cin.fail() || n < 1){
             cout << "Input Salah, Ulangi" << endl << endl;
             cin.clear();
-            cin.ignore(99999999, '\n'); // << Hard-code FTW
+            cin.ignore(99999999, '\n');
         } else { break;}
     }
 
