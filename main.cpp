@@ -31,9 +31,9 @@ void pindah(SI &towerA, SI &towerC){
 int main(){
 	int n;
     while(true){
-        cout << "Masukan Input" << endl;
+        cout << "Masukan Input (Input Harus Lebih Besar Dari 2)" << endl;
         cin >> n;
-        if(cin.fail() || n < 1){
+        if(cin.fail() || n < 3){
             cout << "Input Salah, Ulangi" << endl << endl;
             cin.clear();
             cin.ignore(99999999, '\n');
